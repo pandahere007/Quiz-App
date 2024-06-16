@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Title | Quiz - Quest Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        .timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center my-2 d-sm-block d-lg-none">
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+            <a href="./index.html" class="btn btn-outline-primary">Home</a>
+            <a href="./all-quiz.html" class="btn btn-outline-primary">Quiz</a>
+            <a href="./leaderboard.html" class="btn btn-outline-primary">Leader board</a>
+            <a href="./login.html" class="btn btn-outline-primary">Login</a>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary d-none d-lg-block">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Quest Quiz </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./all-quiz.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./leaderboard.html">Leader board</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Other
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Blog</a></li>
+                            <li><a class="dropdown-item" href="#">About</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Downloads</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <a href="./login.html" class="btn btn-primary ms-2">Login</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="display-4 text-center my-5">Newton's Laws</h1>
+    <p class="fs-4 text-center container">These are the questions about Newton's law.</p>
+
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <span class="fs-5">August 10, 2024 10:00PM</span>
+            
+            <span id="timer" class="fs-5 timer">05:00</span>
+        </div>
+
+        
+        <form id="quizForm" class="my-4">
+            <div class="questions">
+                <div class="card mb-2">
+                    <div class="card-header fw-bold">
+                        Question 1
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Which is the law behind rocket?</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question1" id="q1a" value="First Law" data-answer="third law">
+                            <label class="form-check-label" for="q1a">Newton's First law</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question1" id="q1b" value="Second Law" data-answer="third law">
+                            <label class="form-check-label" for="q1b">Newton's second law</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question1" id="q1c" value="Third Law" data-answer="third law">
+                            <label class="form-check-label" for="q1c">Newton's third law</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question1" id="q1d" value="Other" data-answer="third law">
+                            <label class="form-check-label" for="q1d">Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-2">
+                    <div class="card-header fw-bold">
+                        Question 2
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">If a rocket exerts a force of 1000 N on the exhaust gases, what force do the gases exert on the rocket?</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question2" id="q2a" value="5000N" data-answer="1000n">
+                            <label class="form-check-label" for="q2a">5000N</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question2" id="q2b" value="1000N" data-answer="1000n">
+                            <label class="form-check-label" for="q2b">1000N</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question2" id="q2c" value="2000N" data-answer="1000n">
+                            <label class="form-check-label" for="q2c">2000N</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question2" id="q2d" value="3000N" data-answer="1000n">
+                            <label class="form-check-label" for="q2d">3000N</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-2">
+                    <div class="card-header fw-bold">
+                        Question 3
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">What happens to the acceleration of a rocket as its mass decreases while burning fuel, according to Newton's Second Law?</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question3" id="q3a" value="Increases" data-answer="increases">
+                            <label class="form-check-label" for="q3a">Increases</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question3" id="q3b" value="Decreases" data-answer="increases">
+                            <label class="form-check-label" for="q3b">Decreases</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question3" id="q3c" value="Remain Same" data-answer="increases">
+                            <label class="form-check-label" for="q3c">Remain same</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question3" id="q3d" value="Other" data-answer="increases">
+                            <label class="form-check-label" for="q3d">Other</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-2">
+                    <div class="card-header fw-bold">
+                        Question 4
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Newton's second law described by which formula?</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question4" id="q4a" value="F=ma/2" data-answer="f=ma">
+                            <label class="form-check-label" for="q4a">F=ma/2</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question4" id="q4b" value="F=ma" data-answer="f=ma">
+                            <label class="form-check-label" for="q4b">F=ma</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question4" id="q4c" value="F=kx" data-answer="f=ma">
+                            <label class="form-check-label" for="q4c">F=kx</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question4" id="q4d" value="F=ma/4" data-answer="f=ma">
+                            <label class="form-check-label" for="q4d">F=ma/4</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-2">
+                    <div class="card-header fw-bold">
+                        Question 5
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Which of Newton's laws is also known as the Law of Inertia?</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question5" id="q5a" value="First Law" data-answer="first law">
+                            <label class="form-check-label" for="q5a">Newton's First law</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question5" id="q5b" value="Second Law" data-answer="first law">
+                            <label class="form-check-label" for="q5b">Newton's second law</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question5" id="q5c" value="Third Law" data-answer="first law">
+                            <label class="form-check-label" for="q5c">Newton's third law</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="question5" id="q5d" value="Other" data-answer="first law">
+                            <label class="form-check-label" for="q5d">Other</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Contact</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Feedback</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© Quest Quiz</p>
+    </footer>
+
+    <script>
+
+        function startTimer(duration, display) {
+            let timer = duration, minutes, seconds;
+            const intervalId = setInterval(() => {
+                minutes = Math.floor(timer / 60);
+                seconds = timer % 60;
+
+                minutes = minutes < 10 ? '0' + minutes : minutes;
+                seconds = seconds < 10 ? '0' + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    clearInterval(intervalId);
+                    alert("Time's up!");
+                    document.getElementById('quizForm').submit();
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            const fiveMinutes = 60 * 5,
+                display = document.getElementById('timer');
+            startTimer(fiveMinutes, display);
+        };
+
+        
+        document.getElementById('quizForm').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+
+            let score = 0;
+            const questions = document.querySelectorAll('.questions .card');
+            questions.forEach(question => {
+                const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+                if (selectedAnswer) {
+                    const userAnswer = selectedAnswer.value.toLowerCase();
+                    const correctAnswer = selectedAnswer.dataset.answer.toLowerCase();
+                    if (userAnswer === correctAnswer) {
+                        score++;
+                    }
+                }
+            });
+
+            alert(`Your score: ${score} out of ${questions.length}`);
+            window.location.href = "home.html";
+
+        });s
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+
+</html>
